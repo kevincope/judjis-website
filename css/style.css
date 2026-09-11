@@ -81,6 +81,8 @@ img { max-width: 100%; display: block; }
   justify-content: space-between;
   gap: 24px;
   min-height: 72px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .brand {
@@ -94,7 +96,7 @@ img { max-width: 100%; display: block; }
 
 .brand-logo {
   display: block;
-  height: 48px;
+  height: 120px;
   width: auto;
 }
 
@@ -167,15 +169,6 @@ nav.main-nav a.active {
   }
 }
 
-.hero-eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.78rem;
-  color: var(--gold);
-  font-weight: 700;
-  margin-bottom: 0.9em;
-}
-
 .hero h1 {
   font-size: clamp(2rem, 4vw, 2.9rem);
   margin-bottom: 0.35em;
@@ -187,11 +180,14 @@ nav.main-nav a.active {
   max-width: 54ch;
 }
 
-.hero-logo {
+.hero-photo {
   border-radius: var(--radius);
-  background: var(--paper);
   border: 1px solid var(--line);
-  padding: 24px;
+  background-image: url("../images/Picture1-edited-1024x576.png");
+  background-size: cover;
+  background-position: center 30%;
+  aspect-ratio: 16/10;
+  min-height: 220px;
 }
 
 .hero-actions {
