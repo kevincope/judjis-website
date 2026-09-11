@@ -3,13 +3,13 @@
 :root {
   --navy: #1c2f5e;
   --navy-deep: #131f42;
-  --navy-tint: #eef1f8;
+  --navy-tint: #eeead6;
   --gold: #a97f2e;
   --ink: #1f2430;
   --ink-soft: #4b5266;
-  --line: #dfe3ee;
-  --paper: #ffffff;
-  --bg: #f6f7fb;
+  --line: #cec8a8;
+  --paper: #fffdf6;
+  --bg: #ddd9bf;
   --radius: 10px;
   --maxw: 760px;
   --wide: 1120px;
@@ -70,7 +70,7 @@ img { max-width: 100%; display: block; }
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(255,255,255,0.92);
+  background: rgba(255,253,246,0.92);
   backdrop-filter: saturate(180%) blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -85,10 +85,17 @@ img { max-width: 100%; display: block; }
 
 .brand {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.5em;
   text-decoration: none;
   color: var(--navy-deep);
+  flex: none;
+}
+
+.brand-logo {
+  display: block;
+  height: 48px;
+  width: auto;
 }
 
 .brand-mark {
