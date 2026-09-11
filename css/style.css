@@ -100,22 +100,8 @@ img { max-width: 100%; display: block; }
   width: auto;
 }
 
-.brand-mark {
-  font-family: "Source Serif 4", serif;
-  font-weight: 700;
-  font-size: 1.3rem;
-  letter-spacing: 0.02em;
-}
-
-.brand-sub {
-  display: none;
-  font-size: 0.82rem;
-  color: var(--ink-soft);
-  font-weight: 400;
-}
-
-@media (min-width: 720px) {
-  .brand-sub { display: inline; }
+@media (max-width: 640px) {
+  .brand-logo { height: 64px; }
 }
 
 nav.main-nav {
@@ -149,45 +135,70 @@ nav.main-nav a.active {
 /* ---------- Hero ---------- */
 
 .hero {
-  background: linear-gradient(180deg, var(--navy-tint) 0%, var(--bg) 100%);
+  position: relative;
+  min-height: 520px;
+  background:
+    linear-gradient(180deg, rgba(19,31,66,0.58) 0%, rgba(19,31,66,0.76) 100%),
+    url("../images/Picture1-edited-1024x576.png") center 25% / cover no-repeat;
   border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
 }
 
-.hero .container {
-  padding-top: 56px;
-  padding-bottom: 48px;
-  display: grid;
-  gap: 32px;
+.hero .site-header {
+  position: static;
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom: none;
+}
+
+.hero .brand {
+  background: rgba(255,253,246,0.92);
+  padding: 6px 16px 6px 10px;
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+}
+
+.hero nav.main-nav a {
+  color: #f4f2e6;
+}
+
+.hero nav.main-nav a:hover,
+.hero nav.main-nav a.active {
+  background: rgba(255,255,255,0.16);
+  color: #ffffff;
+}
+
+.hero-copy-row {
+  flex: 1;
+  display: flex;
   align-items: center;
 }
 
-@media (min-width: 860px) {
-  .hero .container {
-    grid-template-columns: 1.1fr 0.9fr;
-    padding-top: 72px;
-    padding-bottom: 64px;
-  }
+.hero-copy {
+  padding: 48px 0 72px;
+  max-width: 620px;
 }
 
-.hero h1 {
+.hero-copy h1 {
+  color: #ffffff;
   font-size: clamp(2rem, 4vw, 2.9rem);
   margin-bottom: 0.35em;
 }
 
-.hero .lede {
+.hero-copy .lede {
   font-size: 1.12rem;
-  color: var(--ink-soft);
+  color: rgba(255,255,255,0.9);
   max-width: 54ch;
 }
 
-.hero-photo {
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
-  background-image: url("../images/Picture1-edited-1024x576.png");
-  background-size: cover;
-  background-position: center 30%;
-  aspect-ratio: 16/10;
-  min-height: 220px;
+.hero .btn-ghost {
+  border-color: rgba(255,255,255,0.85);
+  color: #ffffff;
+}
+
+.hero .btn-ghost:hover {
+  background: rgba(255,255,255,0.14);
 }
 
 .hero-actions {
