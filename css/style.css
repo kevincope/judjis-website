@@ -138,8 +138,9 @@ nav.main-nav a.active {
   position: relative;
   min-height: 520px;
   background:
-    linear-gradient(180deg, rgba(19,31,66,0.58) 0%, rgba(19,31,66,0.76) 100%),
-    url("../images/Picture1-edited-1024x576.png") center 25% / cover no-repeat;
+    linear-gradient(90deg, rgba(8,16,32,0.9) 0%, rgba(8,16,32,0.72) 38%, rgba(8,16,32,0.25) 62%, rgba(8,16,32,0) 82%),
+    url("../images/courthouse-constellation-hero.png") right center / cover no-repeat;
+  background-color: #0c1930;
   border-bottom: 1px solid var(--line);
   display: flex;
   flex-direction: column;
