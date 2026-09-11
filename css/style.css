@@ -153,12 +153,6 @@ nav.main-nav a.active {
   border-bottom: none;
 }
 
-.hero .brand {
-  background: rgba(255,253,246,0.92);
-  padding: 6px 16px 6px 10px;
-  border-radius: 999px;
-  backdrop-filter: blur(6px);
-}
 
 .hero nav.main-nav a {
   color: #f4f2e6;
