@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data — JuDJIS</title>
+<meta name="description" content="Interactive dashboards and downloadable data from the JuDJIS Circuit: Ideology release.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">JuDJIS</span>
+      <span class="brand-sub">Jurist-Derived Judicial Ideology Scores</span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="theory-method-validation.html">Theory &amp; Method</a>
+      <a href="research.html">Research</a>
+      <a href="data.html" class="active">Data</a>
+      <a href="dictionary-data.html">Dictionary Data</a>
+      <a href="discussion-media.html">Discussion/Media</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="container">
+    <div class="kicker">For visualization &amp; download</div>
+    <h1>Data</h1>
+    <p class="lede">Explore JuDJIS scores interactively, or request the underlying data.</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="content-wrap">
+
+    <div class="viz-embed">
+      <h3>Judge Directory</h3>
+      <div class='tableauPlaceholder' id='vizDirectory' style='position: relative;'>
+        <noscript>
+          <a href='#'>
+            <img alt='Directory' src='https://public.tableau.com/static/images/Ju/JuDJISInteractiveTool/JuDJISInteractiveTool/1_rss.png' style='border: none;' />
+          </a>
+        </noscript>
+        <object class='tableauViz' style='display: none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='JuDJISInteractiveTool&#47;JuDJISInteractiveTool' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https://public.tableau.com/static/images/Ju/JuDJISInteractiveTool/JuDJISInteractiveTool/1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+        </object>
+      </div>
+    </div>
+
+    <div class="viz-embed">
+      <h3>Map View</h3>
+      <div class='tableauPlaceholder' id='vizMap' style='position: relative;'>
+        <noscript>
+          <a href='#'>
+            <img alt='Map' src='https://public.tableau.com/static/images/Ma/MapviewJUDJIS2025_8/Dashboard1/1_rss.png' style='border: none;' />
+          </a>
+        </noscript>
+        <object class='tableauViz' style='display: none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='MapviewJUDJIS2025_8&#47;Dashboard1' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https://public.tableau.com/static/images/Ma/MapviewJUDJIS2025_8/Dashboard1/1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+        </object>
+      </div>
+    </div>
+
+    <script type='text/javascript'>
+      function resizeVizDirectory() {
+        var div = document.getElementById('vizDirectory');
+        var viz = div.getElementsByTagName('object')[0];
+        var width = div.offsetWidth;
+        viz.style.display = 'block';
+        viz.style.width = '100%';
+        viz.style.height = (width * 0.75) + 'px';
+      }
+      resizeVizDirectory();
+      window.addEventListener('resize', resizeVizDirectory);
+
+      function resizeVizMap() {
+        var div = document.getElementById('vizMap');
+        var viz = div.getElementsByTagName('object')[0];
+        var width = div.offsetWidth;
+        viz.style.display = 'block';
+        viz.style.width = '100%';
+        viz.style.height = (width * 0.75) + 'px';
+      }
+      resizeVizMap();
+      window.addEventListener('resize', resizeVizMap);
+
+      var judjisTableauScript = document.createElement('script');
+      judjisTableauScript.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      document.body.appendChild(judjisTableauScript);
+    </script>
+
+    <div class="prose">
+      <h2>Data Download</h2>
+      <p>A beta version of the <strong>JuDJIS Circuit: Ideology</strong> data is available for download. Other sets are scheduled to be released over the coming year.</p>
+
+      <div class="cite-box">
+        <strong>Please cite as</strong>
+        Cope, Kevin L. 2025. “An Expert-Sourced Measure of Judicial Ideology.” <em>Political Analysis</em> 33: 1&ndash;20. doi: 10.1017/pan.2025.10009. <a href="https://www.cambridge.org/core/journals/political-analysis/article/an-expertsourced-measure-of-judicial-ideology/DA4B00735B1031B739F9AC14598EBA0B" target="_blank" rel="noreferrer noopener">[PA FirstView]</a>
+      </div>
+
+      <p>To request access to the data, please email your name, position, and intended purpose &mdash; this helps track how the data is being used. No solicitation.</p>
+
+      <a class="btn btn-primary" href="mailto:kcope@law.virginia.edu?subject=JuDJIS%20Data%20Request&body=Name%3A%0APosition%3A%0AIntended%20purpose%3A">Request the data</a>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <h4>JuDJIS</h4>
+      <p>Developed by Kevin L. Cope, Professor of Law and Public Policy, University of Virginia.<br>
+      Questions or thoughts? <a href="mailto:kcope@law.virginia.edu">kcope@law.virginia.edu</a></p>
+      <p class="footer-fine">Please cite as: Cope, Kevin L. 2025. “An Expert-Sourced Measure of Judicial Ideology.” <em>Political Analysis</em> 33: 1–20. doi: 10.1017/pan.2025.10009.</p>
+    </div>
+    <div>
+      <h4>Site</h4>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="theory-method-validation.html">Theory &amp; Method</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="data.html">Data</a></li>
+        <li><a href="dictionary-data.html">Dictionary Data</a></li>
+        <li><a href="discussion-media.html">Discussion/Media</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
