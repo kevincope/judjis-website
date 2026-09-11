@@ -177,8 +177,12 @@ nav.main-nav a.active {
 }
 
 .hero-copy {
-  padding: 48px 0 72px;
+  padding: 48px 24px 72px;
   max-width: 620px;
+}
+
+@media (min-width: 640px) {
+  .hero-copy { padding-left: 48px; }
 }
 
 .hero-copy h1 {
