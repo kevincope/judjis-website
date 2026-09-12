@@ -328,6 +328,14 @@ nav.main-nav a.active {
   object-fit: cover;
 }
 
+.card-media-contain {
+  background: #ffffff;
+}
+
+.card-media-contain img {
+  object-fit: contain;
+}
+
 .card-media::after {
   content: "";
   position: absolute;
