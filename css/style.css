@@ -38,6 +38,14 @@ body.home {
   box-shadow: 0 10px 28px rgba(255,255,255,0.08);
 }
 
+.home .card-body {
+  background: var(--bg);
+}
+
+.home .card-body p {
+  color: #4b5266;
+}
+
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
