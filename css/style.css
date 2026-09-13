@@ -168,17 +168,40 @@ nav.main-nav a.active {
 .hero {
   position: relative;
   min-height: 520px;
-  background:
-    linear-gradient(90deg, rgba(8,16,32,0.9) 0%, rgba(8,16,32,0.72) 38%, rgba(8,16,32,0.25) 62%, rgba(8,16,32,0) 82%),
-    var(--hero-bg-image, url("../images/hero-ideology-wave.png")) right center / cover no-repeat;
   background-color: #0c1930;
   border-bottom: 1px solid var(--line);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1.6s ease;
+}
+
+.hero-bg.is-visible {
+  opacity: 1;
+}
+
+.hero-bg-wave {
+  background:
+    linear-gradient(90deg, rgba(8,16,32,0.9) 0%, rgba(8,16,32,0.72) 38%, rgba(8,16,32,0.25) 62%, rgba(8,16,32,0) 82%),
+    url("../images/hero-ideology-wave.png") right center / cover no-repeat;
+}
+
+.hero-bg-dots {
+  background:
+    linear-gradient(90deg, rgba(8,16,32,0.9) 0%, rgba(8,16,32,0.72) 38%, rgba(8,16,32,0.25) 62%, rgba(8,16,32,0) 82%),
+    url("../images/judicial-constellation-dots.png") right center / cover no-repeat;
 }
 
 .hero .site-header {
-  position: static;
+  position: relative;
+  z-index: 1;
   background: transparent;
   backdrop-filter: none;
   border-bottom: none;
@@ -196,6 +219,8 @@ nav.main-nav a.active {
 }
 
 .hero-copy-row {
+  position: relative;
+  z-index: 1;
   flex: 1;
   display: flex;
   align-items: center;

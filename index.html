@@ -9,24 +9,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<script>
-(function () {
-  var heroImages = [
-    'images/hero-ideology-wave.png',
-    'images/judicial-constellation-dots.png'
-  ];
-  var pick = heroImages[Math.floor(Math.random() * heroImages.length)];
-  // Resolve to an absolute URL: a CSS url() inside a custom-property value
-  // resolves relative to the stylesheet's location, not the page's, so a
-  // page-relative path here would 404 once fed through --hero-bg-image.
-  var absoluteUrl = new URL(pick, document.baseURI).href;
-  document.documentElement.style.setProperty('--hero-bg-image', 'url("' + absoluteUrl + '")');
-})();
-</script>
 </head>
 <body class="home">
 
 <section class="hero">
+  <div class="hero-bg hero-bg-wave is-visible" id="heroBgA"></div>
+  <div class="hero-bg hero-bg-dots" id="heroBgB"></div>
   <header class="site-header">
     <div class="container">
       <a class="brand" href="index.html">
@@ -54,6 +42,24 @@
     </div>
   </div>
 </section>
+
+<script>
+(function () {
+  var layers = [document.getElementById('heroBgA'), document.getElementById('heroBgB')];
+  var current = 0;
+  if (Math.random() < 0.5) {
+    layers[0].classList.remove('is-visible');
+    layers[1].classList.add('is-visible');
+    current = 1;
+  }
+  setInterval(function () {
+    var next = current === 0 ? 1 : 0;
+    layers[current].classList.remove('is-visible');
+    layers[next].classList.add('is-visible');
+    current = next;
+  }, 7500);
+})();
+</script>
 
 <section class="section">
   <div class="container">
